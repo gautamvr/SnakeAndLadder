@@ -1,0 +1,69 @@
+﻿<Window x:Class="SnakeAndLadder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnakeAndLadder"
+        mc:Ignorable="d" Loaded="Pageloaded"
+        Title="Snake and Ladder" Height="870" Width="1620" WindowState="Maximized">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="\assets\snakes-and-ladders-vector-413056 (1).jpg" Stretch="Fill"/>
+
+        <StackPanel Grid.Column="1" Margin="0,0,0,10">
+            <Grid Background="#FF7076F3" Height="172">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="Player1Show" Grid.Column="0" Margin="40,30,0,30" Source="/assets/player1.png"/>
+                <Image x:Name="Player2Show" Grid.Column="1" Margin="10,25,30,30" Source="/assets/player2.png"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="Xpos" Grid.Column="0" Content="Player 1 :  " Margin="20,10,19,0" FontWeight="Bold" FontSize="18" Foreground="#FF000AD3"/>
+                <Label x:Name="Ypos" Grid.Column="1" Content="Player 2 : " Margin="20,10,11,0" FontWeight="Bold" FontSize="18" Foreground="#FF1A6100"/>
+            </Grid>
+            <Label x:Name="Msg" Content="Welcome to Snake and Ladder !" Margin="0,10,0,0" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="403" Height="55" Background="#FF7076F3" Foreground="White" VerticalAlignment="Center" TextOptions.TextHintingMode="Fixed" Padding="20,10,5,5"/>
+
+            <Label x:Name="DiceVal" Content="Dice Value : " Margin="130,5,100,0" FontWeight="Bold" FontSize="18"/>
+
+            <Grid Height="230">
+                <Image x:Name="DiceImage" Source="/assets/roll.jpg" />
+                <Image x:Name="rollImage"  Source="/assets/roll.jpg" RenderTransformOrigin="0.5,0.5" >
+
+                </Image>
+
+            </Grid>
+            <Grid Height="75">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="RollButton1" Click="RollButton1_OnClick" Content="Roll now!" FontWeight="Bold" FontSize="24" Margin="40 20" Cursor="Hand" Background="#FF0C89D1" />
+                <Button Grid.Column="0" x:Name="StopButton1" Click="Stopbutton1_OnClick"  Content="Stop now!" FontWeight="Bold" FontSize="23" Margin="40 20" Cursor="Hand" Background="#FFFD8C2D" Visibility="Hidden"/>
+                <Button Grid.Column="1" x:Name="RollButton2" Click="RollButton2_OnClick" Content="Roll now!" FontWeight="Bold" FontSize="24" Margin="40 20" Cursor="Hand" Background="#FF2DC52D"/>
+                <Button Grid.Column="1" x:Name="StopButton2" Click="StopButton2_OnClick" Content="Stop now!" FontWeight="Bold" FontSize="23" Margin="40 20" Cursor="Hand" Background="#FFFD8C2D" Visibility="Hidden"/>
+
+
+            </Grid>
+            <Label Content="Actions :" Margin="10,10,100,0" FontWeight="Bold" FontSize="14"/>
+
+
+            <TextBox x:Name="actions" Height="151" TextWrapping="Wrap" Text="Welcome to Snake and Ladder." Margin="20,5,19,0" VerticalScrollBarVisibility="Auto" />
+        </StackPanel>
+        <Image x:Name="player1" Height="54" Margin="7,775,1135,0" VerticalAlignment="Top" Width="52" Source="assets/player1.png" Visibility="Hidden" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="player2" Height="54" Margin="67,775,1075,0" VerticalAlignment="Top" Width="52" Source="assets/player2.png" Visibility="Hidden" RenderTransformOrigin="0.5,0.5"/>
+
+
+    </Grid>
+</Window>
+

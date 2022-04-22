@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\" />
+	<Content Include="assets\bgsound.wav" />
+    <Content Include="assets\cantmove.wav" />
+    <Content Include="assets\coinmove.wav" />
+    <Content Include="assets\empty.wav" />
+    <Content Include="assets\enter.wav" />
+    <Content Include="assets\ladder.wav" />
+    <Content Include="assets\rolldice.mp3" />
+    <Content Include="assets\rolldice.wav" />
+    <Content Include="assets\rolldicex.wav" />
+    <Content Include="assets\snake.wav" />
+    <Content Include="assets\stop.wav" />
+    <Content Include="assets\winner.wav" />
+	<Resource Include="assets\1.png" />
+    <Resource Include="assets\2.png" />
+    <Resource Include="assets\3.png" />
+    <Resource Include="assets\4.png" />
+    <Resource Include="assets\5.png" />
+    <Resource Include="assets\6.png" />
+	<Resource Include="assets\player1.png" />
+    <Resource Include="assets\player2.png" />
+	<Resource Include="assets\snakes-and-ladders-vector-413056 %281%29.jpg" />
+  </ItemGroup>
+
+</Project>
